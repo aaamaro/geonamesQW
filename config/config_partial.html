@@ -1,0 +1,41 @@
+
+<div class="centerContainer">
+<!-- Important- "ConfigController" is used by this template but has been already referenced in the Route -->
+<alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+        <div class="col-md-12">
+            <h3>
+              {{'CONFIG.HEADER' | translate}}
+			</h3>
+      <strong>
+          {{'CONFIG.DESCRIPTION0' | translate}}
+      </strong>
+            <p>
+                {{'CONFIG.DESCRIPTION1' | translate}}
+            </p>
+            <p>
+                {{'CONFIG.DESCRIPTION2' | translate}}
+                <a href="http://www.geonames.org/login" target="_top"> {{'CONFIG.REGISTER' | translate}}</a>
+            </p>
+   			<p>
+   				{{'CONFIG.HOWTOREG1' | translate}}
+                <a href={{instructionsLang}} target="new"> {{'CONFIG.HOWTOREG2' | translate}}</a>
+                <!-- <a href="" ng-click="showInstructions()"> {{'CONFIG.HOWTOREG2' | translate}}</a> -->
+            </p>
+            <p>
+                {{'CONFIG.DESCRIPTION3' | translate}}
+            </p>
+
+            <form role="form">
+                <div class="form-group">
+                    <label for="exampleInputEmail1"> {{'CONFIG.USER' | translate}}</label>
+                    <input class="form-control" id="idUser" type="text" ng-model="userName_model" />
+                    <button ng-click="saveUserName()"> {{'CONFIG.SAVE' | translate}}</button>
+                </div>
+              </form>
+                <br/>
+                <p>
+                    {{'CONFIG.DESCRIPTION4' | translate}}
+                </p>
+                <br/>
+        </div>
+</div>
